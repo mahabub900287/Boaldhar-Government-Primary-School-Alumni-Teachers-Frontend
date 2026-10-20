@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Boaldhar Government Primary School Alumni Association — Frontend
 
-## Getting Started
+Bilingual (Bengali / English) website for the **Boaldhar Government Primary School Alumni Association** and **Reunion 2027**.
 
-First, run the development server:
+Built with Next.js 16 (App Router), React 19, TypeScript and Tailwind CSS 4.
+
+> **Status: static UI.** This frontend is not connected to any API yet. Forms are visual only and
+> nothing is submitted. The Laravel API integration comes later.
+
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000  (redirects to /bn)
+npm run build      # production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If the build runs out of memory on a low-RAM machine: `NODE_OPTIONS=--max-old-space-size=2048 npm run build`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/[locale]/            bn | en routes (root layout, home, inner pages, member portal, admin)
+  [...slug]/views.tsx    About, Teachers, Directory, Committee, Gallery, News, Contact, Help, Legal …
+  reunion-2027/          overview + 6-step registration form
+components/              Header (dropdown menus), Footer, Select (custom dropdown), Reveal, Gallery …
+lib/                     content + i18n helpers
+  alumni.ts              REAL alumni list (40 people, 9 groups)
+  committee.ts           REAL proposed convening committee
+  people.ts, demo.ts     DEMO content (teachers, batches, news, schedule, fees …)
+  credits.json           photo credits
+public/photos            demo photographs (see /credits page)
+proxy.ts                 redirects "/" to the default locale
+```
 
-## Learn More
+## Content status
 
-To learn more about Next.js, take a look at the following resources:
+| Content | Status |
+|---|---|
+| Alumni list, convening committee | Real, supplied by the association |
+| Teachers, batches, news, schedule, fees, school facts/history | **Demo** — replace before launch |
+| Photographs | Demo photos from Wikimedia Commons (open licences, credited on `/credits`) — not photos of this school |
+| Event date, fees, payment numbers | Not announced — shown as "to be announced" / demo |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design tokens
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Palette (navy / emerald / gold on warm cream) is defined once in `app/globals.css`
+(`:root`). Fonts: Noto Sans Bengali, Inter, Source Serif 4.
