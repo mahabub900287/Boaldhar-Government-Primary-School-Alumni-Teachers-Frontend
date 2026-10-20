@@ -30,7 +30,7 @@ export const members: Bi[] = [
   m("মোঃ রিপন ইসলাম", "Md. Ripon Islam"),
   m("মোঃ হাবিবুর রহমান", "Md. Habibur Rhaman"),
   m("মোঃ কামরুজ্জামান", "Md. Kamruzzaman"),
-  m("মোঃ এমদাদুল হক", "Md. Emdadul Haque"),
+  m("মোঃ ইমদাদুল হক", "Md. Emdadul Haque"),
   m("মোঃ দেলোয়ার হোসেন", "Md. Delower Hossain"),
   m("মোঃ সোহাগ হোসেন", "Md. Sohag Hossain"),
   m("মোঃ ফরিদ ইসলাম", "Md. Farid Islam"),

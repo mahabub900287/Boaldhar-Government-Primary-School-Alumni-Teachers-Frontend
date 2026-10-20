@@ -70,7 +70,7 @@ const raw: Alumnus[] = [
   { no: 0, name: b("মোঃ হামিদুর রহমান", "Md. Hamidur Rhaman"), role: b("প্রবাসী", "Expatriate"), group: "abroad" },
   { no: 0, name: b("মোঃ খালেক হোসেন", "Md. Khalek Hossain"), role: b("প্রবাসী", "Expatriate"), group: "abroad" },
   // ৮. উচ্চশিক্ষা
-  { no: 35, name: b("মোঃ এমদাদুল হক", "Md. Emdadul Haque"), role: b("শিক্ষার্থী", "Student"), org: b("ঢাকা বিশ্ববিদ্যালয়", "University of Dhaka"), group: "study" },
+  { no: 35, name: b("মোঃ ইমদাদুল হক", "Md. Emdadul Haque"), role: b("শিক্ষার্থী", "Student"), org: b("ঢাকা বিশ্ববিদ্যালয়", "University of Dhaka"), group: "study" },
   { no: 36, name: b("মোঃ দেলোয়ার হোসেন", "Md. Delower Hossain"), role: b("শিক্ষার্থী", "Student"), org: b("গাজীপুর কৃষি বিশ্ববিদ্যালয়", "Gazipur Agricultural University"), group: "study" },
   { no: 37, name: b("ঈদমিরা আক্তার", "Eidmira Akter"), role: b("শিক্ষার্থী", "Student"), org: b("ঢাকা বিশ্ববিদ্যালয়", "University of Dhaka"), group: "study" },
   // ৯. অন্যান্য
@@ -126,7 +126,7 @@ const raw: Alumnus[] = [
   { no: 0, name: b("মোঃ কাসিম", "Md. Kasim"), role: b("কৃষক", "Farmer"), group: "agri" },
   { no: 0, name: b("মোঃ সইদুল", "Md. Soidul"), role: b("কৃষক", "Farmer"), group: "agri" },
   { no: 0, name: b("মোঃ আহসান আলী", "Md. Asahan Ali"), role: b("ব্যবসায়ী", "Businessperson"), group: "business" },
-  { no: 0, name: b("মোঃ সইদুল", "Md. Soidul"), role: b("গার্মেন্টস কর্মকর্তা", "Garments officer"), group: "jobs" },
+  { no: 0, name: b("মোঃ সইদুল ইসলাম", "Md. Soidul Islam"), role: b("গার্মেন্টস কর্মকর্তা", "Garments officer"), group: "jobs" },
   { no: 0, name: b("মোঃ আনিসুর রহমান", "Md. Anisur Rhaman"), role: TBC, group: "others", unconfirmed: true },
   { no: 0, name: b("মোঃ ইসমাইল হোসেন", "Md. Ismail Hossain"), role: b("কৃষি উদ্যোক্তা", "Agri-entrepreneur"), group: "agri" },
   { no: 0, name: b("মোঃ গফুর ইসলাম", "Md. Gofur Islam"), role: b("ভবন নির্মাণ শ্রমিক ও ক্ষুদ্র ব্যবসায়ী", "Building construction worker & small businessman"), group: "business" },
