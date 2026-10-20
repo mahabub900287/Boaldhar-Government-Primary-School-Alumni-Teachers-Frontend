@@ -146,7 +146,7 @@ export const views: Record<string, View> = {
           {sortedMembers(l).map((mm, i) => (
             <Reveal as="li" key={mm.en} delay={(i % 4) * 0.05}>
               <div className="group flex items-center gap-4 rounded-2xl border border-line bg-paper p-4 transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:bg-white hover:shadow-lg">
-                <span aria-hidden className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-gold-soft font-display text-lg text-gold-text transition-colors group-hover:bg-forest group-hover:text-gold">{mm[l].replace(/^(ইঞ্জি\.|Engr\.)\s*/, "").trim()[0]}</span>
+                <span aria-hidden className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-gold-soft font-display text-lg text-gold-text transition-colors group-hover:bg-forest group-hover:text-gold">{mm[l].replace(/^(ইঞ্জি\.|Engr\.|মোঃ|Md\.)\s*/, "").trim()[0]}</span>
                 <span className="min-w-0 flex-1 font-semibold leading-snug text-forest">{mm[l]}</span>
                 <span className="num font-display text-xl text-line transition-colors group-hover:text-gold/60">{num(l, i + 1)}</span>
               </div>

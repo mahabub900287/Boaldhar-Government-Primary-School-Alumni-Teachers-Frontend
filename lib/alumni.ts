@@ -10,7 +10,7 @@ export const GROUPS = [
   { key: "business", icon: "ticket" as const, t: b("ব্যবসা ও উদ্যোক্তা", "In business & enterprise") },
   { key: "agri", icon: "pin" as const, t: b("কৃষি ও কৃষি উদ্যোক্তা", "In agriculture") },
   { key: "abroad", icon: "users" as const, t: b("প্রবাসে কর্মরত", "Working abroad") },
-  { key: "study", icon: "star" as const, t: b("উচ্চশিক্ষায় অধ্যয়নরত", "In higher education") },
+  { key: "study", icon: "star" as const, t: b("উচ্চশিক্ষা সম্পন্নকারী ও অধ্যয়নরত", "Completed or pursuing higher education") },
   { key: "others", icon: "calendar" as const, t: b("অন্যান্য সম্মানিত প্রাক্তন শিক্ষার্থী", "Other honoured alumni") },
 ] as const;
 export type GroupKey = (typeof GROUPS)[number]["key"];
@@ -63,7 +63,7 @@ const raw: Alumnus[] = [
   // ৭. প্রবাস
   { no: 34, name: b("হায়দার আলী", "Haidar Ali"), role: b("প্রবাসী", "Expatriate"), group: "abroad" },
   // ৮. উচ্চশিক্ষা
-  { no: 35, name: b("এমদাদুল ইসলাম", "Emdadul Islam"), role: b("শিক্ষার্থী", "Student"), org: b("ঢাকা বিশ্ববিদ্যালয়", "University of Dhaka"), group: "study" },
+  { no: 35, name: b("মোঃ ইমদাদুল হক", "Md. Imdadul Haque"), role: b("শিক্ষার্থী", "Student"), org: b("ঢাকা বিশ্ববিদ্যালয়", "University of Dhaka"), group: "study" },
   { no: 36, name: b("দেলোয়ার হোসেন", "Delower Hossain"), role: b("শিক্ষার্থী", "Student"), org: b("গাজীপুর কৃষি বিশ্ববিদ্যালয়", "Gazipur Agricultural University"), group: "study" },
   { no: 37, name: b("ঈদমিরা আক্তার", "Eidmira Akter"), role: b("শিক্ষার্থী", "Student"), org: b("ঢাকা বিশ্ববিদ্যালয়", "University of Dhaka"), group: "study" },
   // ৯. অন্যান্য
@@ -74,7 +74,7 @@ const raw: Alumnus[] = [
 /** `no` is assigned by position in the list above. */
 export const alumni: Alumnus[] = raw.map((a, i) => ({ ...a, no: i + 1 }));
 
-const sortKey = (n: string) => n.replace(/^(Dr\.|Engr\.|ডা\.|ইঞ্জি\.)\s*/i, "").trim();
+const sortKey = (n: string) => n.replace(/^(Dr\.|Engr\.|Md\.|ডা\.|ইঞ্জি\.|মোঃ)\s*/i, "").trim();
 
 /** Alphabetical within each group (language-aware), serial numbers follow that order. The Chief Convener and Dr. Robiul Alam and Engr. Rafur Islam stay first in their groups. */
 export function sortedAlumni(l: "bn" | "en"): Alumnus[] {
