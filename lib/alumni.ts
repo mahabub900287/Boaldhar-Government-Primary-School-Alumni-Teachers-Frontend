@@ -93,7 +93,7 @@ const raw: Alumnus[] = [
   { no: 0, name: b("মোঃ ইসার উদ্দিন", "Md. Yesar Uddin"), role: b("কৃষক", "Farmer"), group: "agri" },
   { no: 0, name: b("মোঃ শাহীন ইসলাম", "Md. Shahin Islam"), role: b("কৃষি উদ্যোক্তা", "Agri-entrepreneur"), group: "agri" },
   { no: 0, name: b("মোঃ মানিক হোসেন", "Md. Manik Hossain"), role: b("শ্রমিক", "Worker"), group: "others" },
-  { no: 0, name: b("মোঃ উজ্জ্বল হোসেন", "Md. Uzzal Hossain"), role: b("শিক্ষার্থী", "Student"), org: b("বালিয়াডাঙ্গী গোল্ডেন স্কুল", "Baliadangi Golden School"), group: "study" },
+  { no: 0, name: b("মোঃ উজ্জ্বল হোসেন", "Md. Uzzal Hossain"), role: b("শিক্ষার্থী", "Student"), org: b("বালিয়াডাঙ্গী গোল্ডেন স্কুল এন্ড কলেজ", "Baliadangi Golden School and College"), group: "study" },
   { no: 0, name: b("মোঃ রাসেল আলী", "Md. Rasel Ali"), role: b("শিক্ষার্থী", "Student"), org: b("ঠাকুরগাঁও পলিটেকনিক ইনস্টিটিউট", "Thakurgaon Polytechnic Institute"), group: "study" },
   { no: 0, name: b("মোঃ সাব্বির হোসেন", "Md. Sabbir Hossain"), role: b("শিক্ষার্থী", "Student"), org: b("ঠাকুরগাঁও পলিটেকনিক ইনস্টিটিউট", "Thakurgaon Polytechnic Institute"), group: "study" },
   { no: 0, name: b("মোঃ রাকিব হোসেন", "Md. Rakib Hossain"), role: b("শিক্ষার্থী", "Student"), org: b("ঠাকুরগাঁও পলিটেকনিক ইনস্টিটিউট", "Thakurgaon Polytechnic Institute"), group: "study" },
