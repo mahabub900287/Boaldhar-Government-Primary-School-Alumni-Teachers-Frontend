@@ -21,60 +21,60 @@ const TBC = b("পেশার বিস্তারিত নিশ্চিত
 
 const raw: Alumnus[] = [
   // ১. চিকিৎসা
-  { no: 1, name: b("ডা. রবিউল আলম", "Dr. Robiul Alam"), role: b("চিকিৎসক", "Physician"), group: "medical", top: true },
-  { no: 2, name: b("ডা. রেজাউল করিম", "Dr. Rejaul Korim"), role: b("চিকিৎসক", "Physician"), group: "medical" },
+  { no: 1, name: b("ডা. মোঃ রবিউল আলম", "Dr. Md. Robiul Alam"), role: b("চিকিৎসক", "Physician"), group: "medical", top: true },
+  { no: 2, name: b("ডা. মোঃ রেজাউল করিম", "Dr. Md. Rejaul Korim"), role: b("চিকিৎসক", "Physician"), group: "medical" },
   { no: 3, name: b("ডা. রিতা আক্তার", "Dr. Rita Akter"), role: b("চিকিৎসক", "Physician"), group: "medical" },
   // ২. শিক্ষা
-  { no: 4, name: b("সিদ্দিকুর রহমান লিটন", "Siddiqur Rahman Liton"), role: b("সহযোগী অধ্যাপক", "Associate Professor"), org: b("বেগম রোকেয়া সরকারি কলেজ, রংপুর", "Begum Rokeya Government College, Rangpur"), group: "education", convener: true },
-  { no: 5, name: b("আহম্মদ আলী", "Ahamoad Ali"), role: b("অধ্যাপক", "Professor"), group: "education" },
-  { no: 6, name: b("আনোয়ার হোসেন", "Anawar Hossain"), role: b("শিক্ষক", "Teacher"), group: "education" },
-  { no: 7, name: b("তেনজামুল ইসলাম", "Tenjamul Islam"), role: b("শিক্ষক", "Teacher"), group: "education" },
-  { no: 8, name: b("শাহাদাত হোসেন", "Sahadad Hossain"), role: b("শিক্ষক", "Teacher"), group: "education" },
-  { no: 9, name: b("আমিনুন ইসলাম", "Aminun Islam"), role: b("শিক্ষক", "Teacher"), group: "education" },
-  { no: 10, name: b("সাহাজাহান আলী", "Sahajahan Ali"), role: b("অধ্যাপক", "Professor"), org: b("কুড়িগ্রাম পলিটেকনিক ইনস্টিটিউট", "Kurigram Polytechnic Institute"), group: "education" },
-  { no: 11, name: b("হারুন অর রশিদ", "Harun Or Rosid"), role: b("জুনিয়র ইনস্ট্রাক্টর", "Junior Instructor"), org: b("দিনাজপুর পলিটেকনিক ইনস্টিটিউট", "Dinajpur Polytechnic Institute"), group: "education" },
+  { no: 4, name: b("মোঃ সিদ্দিকুর রহমান লিটন", "Md. Siddiqur Rahman Liton"), role: b("সহযোগী অধ্যাপক", "Associate Professor"), org: b("বেগম রোকেয়া সরকারি কলেজ, রংপুর", "Begum Rokeya Government College, Rangpur"), group: "education", convener: true },
+  { no: 5, name: b("মোঃ আহম্মদ আলী", "Md. Ahamoad Ali"), role: b("অধ্যাপক", "Professor"), group: "education" },
+  { no: 6, name: b("মোঃ আনোয়ার হোসেন", "Md. Anawar Hossain"), role: b("শিক্ষক", "Teacher"), group: "education" },
+  { no: 7, name: b("মোঃ তেনজামুল ইসলাম", "Md. Tenjamul Islam"), role: b("শিক্ষক", "Teacher"), group: "education" },
+  { no: 8, name: b("মোঃ শাহাদাত হোসেন", "Md. Sahadad Hossain"), role: b("শিক্ষক", "Teacher"), group: "education" },
+  { no: 9, name: b("মোঃ আমিনুন ইসলাম", "Md. Aminun Islam"), role: b("শিক্ষক", "Teacher"), group: "education" },
+  { no: 10, name: b("মোঃ সাহাজাহান আলী", "Md. Sahajahan Ali"), role: b("অধ্যাপক", "Professor"), org: b("কুড়িগ্রাম পলিটেকনিক ইনস্টিটিউট", "Kurigram Polytechnic Institute"), group: "education" },
+  { no: 11, name: b("মোঃ হারুন অর রশিদ", "Md. Harun Or Rosid"), role: b("জুনিয়র ইনস্ট্রাক্টর", "Junior Instructor"), org: b("দিনাজপুর পলিটেকনিক ইনস্টিটিউট", "Dinajpur Polytechnic Institute"), group: "education" },
   // ৩. প্রকৌশল ও আইটি
-  { no: 12, name: b("ইঞ্জি. রাফুর ইসলাম", "Engr. Rafur Islam"), role: b("প্রকৌশলী", "Engineer"), group: "tech", top: true },
-  { no: 13, name: b("আসাদুজ্জামান", "Asaduzzaman"), role: b("নেটওয়ার্ক প্রকৌশলী", "Network Engineer"), group: "tech" },
-  { no: 14, name: b("শামীম হোসেন", "Shamin Hossain"), role: b("সফটওয়্যার প্রকৌশলী", "Software Engineer"), group: "tech" },
-  { no: 15, name: b("মাহাবুব আলম", "Mahabub Alam"), role: b("সফটওয়্যার প্রকৌশলী", "Software Engineer"), group: "tech" },
+  { no: 12, name: b("ইঞ্জি. মোঃ রাফুর ইসলাম", "Engr. Md. Rafur Islam"), role: b("প্রকৌশলী", "Engineer"), group: "tech", top: true },
+  { no: 13, name: b("মোঃ আসাদুজ্জামান", "Md. Asaduzzaman"), role: b("নেটওয়ার্ক প্রকৌশলী", "Network Engineer"), group: "tech" },
+  { no: 14, name: b("মোঃ শামীম হোসেন", "Md. Shamin Hossain"), role: b("সফটওয়্যার প্রকৌশলী", "Software Engineer"), group: "tech" },
+  { no: 15, name: b("মোঃ মাহাবুব আলম", "Md. Mahabub Alam"), role: b("সফটওয়্যার প্রকৌশলী", "Software Engineer"), group: "tech" },
   // ৪. চাকরি
-  { no: 16, name: b("ইলিয়াস হোসেন", "Eliash Hossian"), role: b("তহশিলদার", "Tahsildar (land officer)"), group: "jobs" },
-  { no: 17, name: b("তরিকুল ইসলাম", "Torikul Islam"), role: b("সরকারি চাকরিজীবী", "Government employee"), group: "jobs" },
-  { no: 18, name: b("মোস্তাফিজুর রহমান", "Mostafijur Rahaman"), role: b("সরকারি চাকরিজীবী", "Government employee"), group: "jobs" },
-  { no: 19, name: b("আসাদুজ্জামান", "Asaduzzaman"), role: b("পুলিশ সাব-ইন্সপেক্টর (SI)", "Police Sub-Inspector (SI)"), group: "jobs" },
-  { no: 20, name: b("আসাদুজ্জামান ফরিদ", "Asaduzzaman Farid"), role: b("বেসরকারি চাকরিজীবী", "Private-sector employee"), group: "jobs" },
-  { no: 21, name: b("ইয়াসিন আলী", "Yeasin Ali"), role: b("সরকারি চাকরিজীবী", "Government employee"), group: "jobs" },
-  { no: 22, name: b("ইয়াসিন আলী (আমিন)", "Yeasin Ali (Amin)"), role: b("ভূমি জরিপকারী (আমিন)", "Land surveyor (Amin)"), group: "business" },
-  { no: 23, name: b("ফিরোজ হোসেন", "Firoz Hossian"), role: b("ব্যাংকার", "Banker"), group: "jobs" },
-  { no: 24, name: b("নাজমুল ইসলাম", "Namzmul Islam"), role: b("ব্যাংকার", "Banker"), group: "jobs" },
-  { no: 0, name: b("মিলন হোসেন", "Milon Hossain"), role: b("সরকারি চাকরিজীবী", "Government employee"), group: "jobs" },
-  { no: 25, name: b("সাকিলুর রহমান সুজন", "Sakilur Rahman Suzan"), role: b("কর্মরত", "Employed"), org: b("ব্র্যাক ব্যাংক", "BRAC Bank"), group: "jobs" },
-  { no: 26, name: b("জিল্লুর রহমান", "Jillur Rahaman"), role: b("কর্মরত", "Serving"), org: b("বাংলাদেশ সেনাবাহিনী", "Bangladesh Army"), group: "jobs" },
+  { no: 16, name: b("মোঃ ইলিয়াস হোসেন", "Md. Eliash Hossian"), role: b("তহশিলদার", "Tahsildar (land officer)"), group: "jobs" },
+  { no: 17, name: b("মোঃ তরিকুল ইসলাম", "Md. Torikul Islam"), role: b("সরকারি চাকরিজীবী", "Government employee"), group: "jobs" },
+  { no: 18, name: b("মোঃ মোস্তাফিজুর রহমান", "Md. Mostafijur Rahaman"), role: b("সরকারি চাকরিজীবী", "Government employee"), group: "jobs" },
+  { no: 19, name: b("মোঃ আসাদুজ্জামান", "Md. Asaduzzaman"), role: b("পুলিশ সাব-ইন্সপেক্টর (SI)", "Police Sub-Inspector (SI)"), group: "jobs" },
+  { no: 20, name: b("মোঃ আসাদুজ্জামান ফরিদ", "Md. Asaduzzaman Farid"), role: b("বেসরকারি চাকরিজীবী", "Private-sector employee"), group: "jobs" },
+  { no: 21, name: b("মোঃ ইয়াসিন আলী", "Md. Yeasin Ali"), role: b("সরকারি চাকরিজীবী", "Government employee"), group: "jobs" },
+  { no: 22, name: b("মোঃ ইয়াসিন আলী (আমিন)", "Md. Yeasin Ali (Amin)"), role: b("ভূমি জরিপকারী (আমিন)", "Land surveyor (Amin)"), group: "business" },
+  { no: 23, name: b("মোঃ ফিরোজ হোসেন", "Md. Firoz Hossian"), role: b("ব্যাংকার", "Banker"), group: "jobs" },
+  { no: 24, name: b("মোঃ নাজমুল ইসলাম", "Md. Namzmul Islam"), role: b("ব্যাংকার", "Banker"), group: "jobs" },
+  { no: 0, name: b("মোঃ মিলন হোসেন", "Md. Milon Hossain"), role: b("সরকারি চাকরিজীবী", "Government employee"), group: "jobs" },
+  { no: 25, name: b("মোঃ সাকিলুর রহমান সুজন", "Md. Sakilur Rahman Suzan"), role: b("কর্মরত", "Employed"), org: b("ব্র্যাক ব্যাংক", "BRAC Bank"), group: "jobs" },
+  { no: 26, name: b("মোঃ জিল্লুর রহমান", "Md. Jillur Rahaman"), role: b("কর্মরত", "Serving"), org: b("বাংলাদেশ সেনাবাহিনী", "Bangladesh Army"), group: "jobs" },
   // ৫. ব্যবসা
-  { no: 27, name: b("শাহানাজ হোসেন", "Sahanaz Hossain"), role: b("ব্যবসায়ী", "Businessperson"), group: "business" },
-  { no: 28, name: b("রিপন ইসলাম", "Ripon Islam"), role: b("ব্যবসায়ী", "Businessperson"), group: "business" },
-  { no: 29, name: b("হাবিবুর রহমান", "Habibur Rhaman"), role: b("ব্যবসায়ী", "Businessperson"), group: "business" },
-  { no: 30, name: b("কামরুজ্জামান", "Kamruzzaman"), role: b("বৃহৎ কৃষি খামারের উদ্যোক্তা", "Large-scale agro-farm entrepreneur"), group: "business" },
+  { no: 27, name: b("মোঃ শাহানাজ হোসেন", "Md. Sahanaz Hossain"), role: b("ব্যবসায়ী", "Businessperson"), group: "business" },
+  { no: 28, name: b("মোঃ রিপন ইসলাম", "Md. Ripon Islam"), role: b("ব্যবসায়ী", "Businessperson"), group: "business" },
+  { no: 29, name: b("মোঃ হাবিবুর রহমান", "Md. Habibur Rhaman"), role: b("ব্যবসায়ী", "Businessperson"), group: "business" },
+  { no: 30, name: b("মোঃ কামরুজ্জামান", "Md. Kamruzzaman"), role: b("বৃহৎ কৃষি খামারের উদ্যোক্তা", "Large-scale agro-farm entrepreneur"), group: "business" },
   // ৬. কৃষি
-  { no: 31, name: b("ইসমাইল হোসেন", "Ismail Hossain"), role: b("কৃষি উদ্যোক্তা", "Agri-entrepreneur"), group: "agri" },
-  { no: 32, name: b("রবিউল আলম", "Robiul Alam"), role: b("কৃষক", "Farmer"), group: "agri" },
-  { no: 33, name: b("বাবুল হোসেন", "Babul Hossain"), role: b("কৃষক", "Farmer"), group: "agri" },
+  { no: 31, name: b("মোঃ ইসমাইল হোসেন", "Md. Ismail Hossain"), role: b("কৃষি উদ্যোক্তা", "Agri-entrepreneur"), group: "agri" },
+  { no: 32, name: b("মোঃ রবিউল আলম", "Md. Robiul Alam"), role: b("কৃষক", "Farmer"), group: "agri" },
+  { no: 33, name: b("মোঃ বাবুল হোসেন", "Md. Babul Hossain"), role: b("কৃষক", "Farmer"), group: "agri" },
   // ৭. প্রবাস
-  { no: 34, name: b("হায়দার আলী", "Haidar Ali"), role: b("প্রবাসী", "Expatriate"), group: "abroad" },
+  { no: 34, name: b("মোঃ হায়দার আলী", "Md. Haidar Ali"), role: b("প্রবাসী", "Expatriate"), group: "abroad" },
   // ৮. উচ্চশিক্ষা
-  { no: 35, name: b("মোঃ ইমদাদুল হক", "Md. Imdadul Haque"), role: b("শিক্ষার্থী", "Student"), org: b("ঢাকা বিশ্ববিদ্যালয়", "University of Dhaka"), group: "study" },
-  { no: 36, name: b("দেলোয়ার হোসেন", "Delower Hossain"), role: b("শিক্ষার্থী", "Student"), org: b("গাজীপুর কৃষি বিশ্ববিদ্যালয়", "Gazipur Agricultural University"), group: "study" },
+  { no: 35, name: b("মোঃ এমদাদুল হক", "Md. Emdadul Haque"), role: b("শিক্ষার্থী", "Student"), org: b("ঢাকা বিশ্ববিদ্যালয়", "University of Dhaka"), group: "study" },
+  { no: 36, name: b("মোঃ দেলোয়ার হোসেন", "Md. Delower Hossain"), role: b("শিক্ষার্থী", "Student"), org: b("গাজীপুর কৃষি বিশ্ববিদ্যালয়", "Gazipur Agricultural University"), group: "study" },
   { no: 37, name: b("ঈদমিরা আক্তার", "Eidmira Akter"), role: b("শিক্ষার্থী", "Student"), org: b("ঢাকা বিশ্ববিদ্যালয়", "University of Dhaka"), group: "study" },
   // ৯. অন্যান্য
-  { no: 38, name: b("আহসান আলী", "Ahasan Ali"), role: TBC, group: "others", unconfirmed: true },
-  { no: 39, name: b("পয়জাম আলী", "Poyjam Ali"), role: TBC, group: "others", unconfirmed: true },
+  { no: 38, name: b("মোঃ আহসান আলী", "Md. Ahasan Ali"), role: TBC, group: "others", unconfirmed: true },
+  { no: 39, name: b("মোঃ পয়জাম আলী", "Md. Poyjam Ali"), role: TBC, group: "others", unconfirmed: true },
 ];
 
 /** `no` is assigned by position in the list above. */
 export const alumni: Alumnus[] = raw.map((a, i) => ({ ...a, no: i + 1 }));
 
-const sortKey = (n: string) => n.replace(/^(Dr\.|Engr\.|Md\.|ডা\.|ইঞ্জি\.|মোঃ)\s*/i, "").trim();
+const sortKey = (n: string) => n.replace(/^((Dr\.|Engr\.|Md\.|ডা\.|ইঞ্জি\.|মোঃ)\s*)+/i, "").trim();
 
 /** Alphabetical within each group (language-aware), serial numbers follow that order. The Chief Convener and Dr. Robiul Alam and Engr. Rafur Islam stay first in their groups. */
 export function sortedAlumni(l: "bn" | "en"): Alumnus[] {

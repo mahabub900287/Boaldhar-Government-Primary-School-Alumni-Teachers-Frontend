@@ -5,7 +5,7 @@ import { Select } from "./Select";
 export type Person = { no: number; name: string; role: string; org?: string; group: string; groupLabel: string; convener?: boolean; unconfirmed?: boolean };
 type Labels = { search: string; group: string; sort: string; all: string; results: string; none: string; reset: string; byGroup: string; byName: string; convener: string; confirm: string };
 
-const initial = (n: string) => n.replace(/^(Dr\.|Engr\.|Md\.|ডা\.|ইঞ্জি\.|মোঃ)\s*/i, "").trim()[0] ?? "?";
+const initial = (n: string) => n.replace(/^((Dr\.|Engr\.|Md\.|ডা\.|ইঞ্জি\.|মোঃ)\s*)+/i, "").trim()[0] ?? "?";
 
 export function DirectoryExplorer({ people, groups, labels, digits }: { people: Person[]; groups: { value: string; label: string }[]; labels: Labels; digits: "bn" | "en" }) {
   const [q, setQ] = useState("");

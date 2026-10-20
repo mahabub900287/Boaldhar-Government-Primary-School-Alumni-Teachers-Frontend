@@ -116,7 +116,7 @@ export const views: Record<string, View> = {
           <article className="relative overflow-hidden rounded-[2rem] bg-green-dark p-8 text-white shadow-2xl md:p-12">
             <div aria-hidden className="dots absolute inset-0 opacity-20 [mask-image:radial-gradient(ellipse_at_top_right,black,transparent_70%)]" />
             <div className="relative flex flex-col items-start gap-8 md:flex-row md:items-center">
-              <span aria-hidden className="grid h-28 w-28 shrink-0 place-items-center rounded-full bg-gradient-to-br from-gold to-[#e0c27a] font-display text-5xl font-semibold text-green-dark ring-8 ring-white/10">{chief.name[l].trim()[0]}</span>
+              <span aria-hidden className="grid h-28 w-28 shrink-0 place-items-center rounded-full bg-gradient-to-br from-gold to-[#e0c27a] font-display text-5xl font-semibold text-green-dark ring-8 ring-white/10">{chief.name[l].replace(/^((Dr\.|Engr\.|Md\.|ডা\.|ইঞ্জি\.|মোঃ)\s*)+/, "").trim()[0]}</span>
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold">{chief.role[l]}</p>
                 <h2 className="font-display mt-2 text-3xl font-semibold md:text-4xl">{chief.name[l]}</h2>
@@ -132,7 +132,7 @@ export const views: Record<string, View> = {
           {sortedConveners(l).map((c, i) => (
             <Reveal key={c.name.en} delay={i * 0.08}>
               <article className="flex h-full items-center gap-5 rounded-3xl border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-gold/60 hover:shadow-xl">
-                <span aria-hidden className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-gradient-to-br from-forest to-green font-display text-2xl text-white ring-4 ring-gold-soft">{c.name[l].replace(/^(ডা\.|Dr\.)\s*/, "").trim()[0]}</span>
+                <span aria-hidden className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-gradient-to-br from-forest to-green font-display text-2xl text-white ring-4 ring-gold-soft">{c.name[l].replace(/^((Dr\.|Engr\.|Md\.|ডা\.|ইঞ্জি\.|মোঃ)\s*)+/, "").trim()[0]}</span>
                 <div className="min-w-0"><p className="text-xs font-semibold uppercase tracking-wider text-gold-text">{c.role[l]}</p><h3 className="font-display text-xl font-semibold leading-snug text-forest">{c.name[l]}</h3><p className="text-sm text-ink-soft">{c.detail[l]}</p></div>
               </article>
             </Reveal>
@@ -146,7 +146,7 @@ export const views: Record<string, View> = {
           {sortedMembers(l).map((mm, i) => (
             <Reveal as="li" key={mm.en} delay={(i % 4) * 0.05}>
               <div className="group flex items-center gap-4 rounded-2xl border border-line bg-paper p-4 transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:bg-white hover:shadow-lg">
-                <span aria-hidden className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-gold-soft font-display text-lg text-gold-text transition-colors group-hover:bg-forest group-hover:text-gold">{mm[l].replace(/^(ইঞ্জি\.|Engr\.|মোঃ|Md\.)\s*/, "").trim()[0]}</span>
+                <span aria-hidden className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-gold-soft font-display text-lg text-gold-text transition-colors group-hover:bg-forest group-hover:text-gold">{mm[l].replace(/^((Dr\.|Engr\.|Md\.|ডা\.|ইঞ্জি\.|মোঃ)\s*)+/, "").trim()[0]}</span>
                 <span className="min-w-0 flex-1 font-semibold leading-snug text-forest">{mm[l]}</span>
                 <span className="num font-display text-xl text-line transition-colors group-hover:text-gold/60">{num(l, i + 1)}</span>
               </div>

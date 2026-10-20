@@ -2,41 +2,41 @@
 export type Bi = { bn: string; en: string };
 const b = (bn: string, en: string): Bi => ({ bn, en });
 
-export const chief = { name: b("সিদ্দিকুর রহমান লিটন", "Siddiqur Rahman Liton"), role: b("প্রধান আহ্বায়ক", "Chief Convener"), detail: b("সহযোগী অধ্যাপক, বেগম রোকেয়া সরকারি কলেজ, রংপুর", "Associate Professor, Begum Rokeya Government College, Rangpur") };
+export const chief = { name: b("মোঃ সিদ্দিকুর রহমান লিটন", "Md. Siddiqur Rahman Liton"), role: b("প্রধান আহ্বায়ক", "Chief Convener"), detail: b("সহযোগী অধ্যাপক, বেগম রোকেয়া সরকারি কলেজ, রংপুর", "Associate Professor, Begum Rokeya Government College, Rangpur") };
 
 export const conveners = [
-  { name: b("ডা. রবিউল আলম", "Dr. Robiul Alam"), role: b("আহ্বায়ক", "Convener"), detail: b("চিকিৎসক", "Physician") },
-  { name: b("সাহাজাহান আলী", "Sahajahan Ali"), role: b("আহ্বায়ক", "Convener"), detail: b("অধ্যাপক, কুড়িগ্রাম পলিটেকনিক ইনস্টিটিউট", "Professor, Kurigram Polytechnic Institute") },
-  { name: b("ইলিয়াস হোসেন", "Eliash Hossian"), role: b("আহ্বায়ক", "Convener"), detail: b("তহশিলদার", "Tahsildar (land officer)") },
+  { name: b("ডা. মোঃ রবিউল আলম", "Dr. Md. Robiul Alam"), role: b("আহ্বায়ক", "Convener"), detail: b("চিকিৎসক", "Physician") },
+  { name: b("মোঃ সাহাজাহান আলী", "Md. Sahajahan Ali"), role: b("আহ্বায়ক", "Convener"), detail: b("অধ্যাপক, কুড়িগ্রাম পলিটেকনিক ইনস্টিটিউট", "Professor, Kurigram Polytechnic Institute") },
+  { name: b("মোঃ ইলিয়াস হোসেন", "Md. Eliash Hossian"), role: b("আহ্বায়ক", "Convener"), detail: b("তহশিলদার", "Tahsildar (land officer)") },
 ];
 
 const m = (bn: string, en: string) => b(bn, en);
 export const members: Bi[] = [
-  m("আনোয়ার হোসেন", "Anawar Hossain"),
-  m("তেনজামুল ইসলাম", "Tenjamul Islam"),
-  m("শাহাদাত হোসেন", "Sahadad Hossain"),
-  m("আমিনুন ইসলাম", "Aminun Islam"),
-  m("হারুন অর রশিদ", "Harun Or Rosid"),
-  m("ইঞ্জি. রাফুর ইসলাম", "Engr. Rafur Islam"),
-  m("মাহাবুব আলম", "Mahabub Alam"),
-  m("তরিকুল ইসলাম", "Tarikul Islam"),
-  m("মোস্তাফিজুর রহমান", "Mostafijur Rahaman"),
-  m("আসাদুজ্জামান", "Asaduzzaman"),
-  m("আসাদুজ্জামান ফরিদ", "Asaduzzaman Farid"),
-  m("ফিরোজ হোসেন", "Firoz Hossian"),
-  m("সাকিলুর রহমান সুজন", "Sakilur Rahman Suzan"),
-  m("জিল্লুর রহমান", "Jillur Rahaman"),
-  m("শাহানাজ হোসেন", "Sahanaz Hossain"),
-  m("রিপন ইসলাম", "Ripon Islam"),
-  m("হাবিবুর রহমান", "Habibur Rhaman"),
-  m("কামরুজ্জামান", "Kamruzzaman"),
-  m("মোঃ ইমদাদুল হক", "Md. Imdadul Haque"),
-  m("দেলোয়ার হোসেন", "Delower Hossain"),
-  m("সোহাগ হোসেন", "Sohag Hossain"),
-  m("ফরিদ ইসলাম", "Farid Islam"),
-  m("তৌহিদুর ইসলাম", "Touhidur Islam"),
-  m("শামীম হোসেন", "Shamim Hossain"),
-  m("মিলন হোসেন", "Milon Hossain"),
+  m("মোঃ আনোয়ার হোসেন", "Md. Anawar Hossain"),
+  m("মোঃ তেনজামুল ইসলাম", "Md. Tenjamul Islam"),
+  m("মোঃ শাহাদাত হোসেন", "Md. Sahadad Hossain"),
+  m("মোঃ আমিনুন ইসলাম", "Md. Aminun Islam"),
+  m("মোঃ হারুন অর রশিদ", "Md. Harun Or Rosid"),
+  m("ইঞ্জি. মোঃ রাফুর ইসলাম", "Engr. Md. Rafur Islam"),
+  m("মোঃ মাহাবুব আলম", "Md. Mahabub Alam"),
+  m("মোঃ তরিকুল ইসলাম", "Md. Tarikul Islam"),
+  m("মোঃ মোস্তাফিজুর রহমান", "Md. Mostafijur Rahaman"),
+  m("মোঃ আসাদুজ্জামান", "Md. Asaduzzaman"),
+  m("মোঃ আসাদুজ্জামান ফরিদ", "Md. Asaduzzaman Farid"),
+  m("মোঃ ফিরোজ হোসেন", "Md. Firoz Hossian"),
+  m("মোঃ সাকিলুর রহমান সুজন", "Md. Sakilur Rahman Suzan"),
+  m("মোঃ জিল্লুর রহমান", "Md. Jillur Rahaman"),
+  m("মোঃ শাহানাজ হোসেন", "Md. Sahanaz Hossain"),
+  m("মোঃ রিপন ইসলাম", "Md. Ripon Islam"),
+  m("মোঃ হাবিবুর রহমান", "Md. Habibur Rhaman"),
+  m("মোঃ কামরুজ্জামান", "Md. Kamruzzaman"),
+  m("মোঃ এমদাদুল হক", "Md. Emdadul Haque"),
+  m("মোঃ দেলোয়ার হোসেন", "Md. Delower Hossain"),
+  m("মোঃ সোহাগ হোসেন", "Md. Sohag Hossain"),
+  m("মোঃ ফরিদ ইসলাম", "Md. Farid Islam"),
+  m("মোঃ তৌহিদুর ইসলাম", "Md. Touhidur Islam"),
+  m("মোঃ শামীম হোসেন", "Md. Shamim Hossain"),
+  m("মোঃ মিলন হোসেন", "Md. Milon Hossain"),
 ];
 
 export const duties = [
@@ -62,7 +62,7 @@ export const text = {
   ),
 };
 
-const key = (n: string) => n.replace(/^(Dr\.|Engr\.|Md\.|ডা\.|ইঞ্জি\.|মোঃ)\s*/i, "").trim();
+const key = (n: string) => n.replace(/^((Dr\.|Engr\.|Md\.|ডা\.|ইঞ্জি\.|মোঃ)\s*)+/i, "").trim();
 const sortBi = <T extends { name: Bi }>(arr: T[], l: "bn" | "en") => {
   const col = new Intl.Collator(l === "bn" ? "bn" : "en");
   return [...arr].sort((a, b) => col.compare(key(a.name[l]), key(b.name[l])));
