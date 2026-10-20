@@ -1,4 +1,4 @@
-/** REAL alumni list supplied by the association (99 people, 9 groups). Bengali spellings of Latin names can be added when supplied. */
+/** REAL alumni list supplied by the association (100 people, 9 groups). Bengali spellings of Latin names can be added when supplied. */
 export type Bi = { bn: string; en: string };
 const b = (bn: string, en: string): Bi => ({ bn, en });
 
@@ -129,6 +129,7 @@ const raw: Alumnus[] = [
   { no: 0, name: b("মোঃ সইদুল", "Md. Soidul"), role: b("গার্মেন্টস কর্মকর্তা", "Garments officer"), group: "jobs" },
   { no: 0, name: b("মোঃ আনিসুর রহমান", "Md. Anisur Rhaman"), role: TBC, group: "others", unconfirmed: true },
   { no: 0, name: b("মোঃ ইসমাইল হোসেন", "Md. Ismail Hossain"), role: b("কৃষি উদ্যোক্তা", "Agri-entrepreneur"), group: "agri" },
+  { no: 0, name: b("মোঃ গফুর ইসলাম", "Md. Gofur Islam"), role: b("ভবন নির্মাণ শ্রমিক ও ক্ষুদ্র ব্যবসায়ী", "Building construction worker & small businessman"), group: "business" },
 ];
 
 /** `no` is assigned by position in the list above. */
