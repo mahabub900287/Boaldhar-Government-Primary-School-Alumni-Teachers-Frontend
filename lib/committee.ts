@@ -23,7 +23,7 @@ export const members: Bi[] = [
   m("মোঃ মোস্তাফিজুর রহমান", "Md. Mostafijur Rahaman"),
   m("মোঃ আসাদুজ্জামান", "Md. Asaduzzaman"),
   m("মোঃ আসাদুজ্জামান ফরিদ", "Md. Asaduzzaman Farid"),
-  m("মোঃ ফিরোজ হোসেন", "Md. Firoz Hossian"),
+  m("মোঃ ফিরোজ জামান", "Md. Firoz Zaman"),
   m("মোঃ সাকিলুর রহমান সুজন", "Md. Sakilur Rahman Suzan"),
   m("মোঃ জিল্লুর রহমান", "Md. Jillur Rahaman"),
   m("মোঃ শাহানাজ হোসেন", "Md. Sahanaz Hossain"),
@@ -62,7 +62,7 @@ export const text = {
   ),
 };
 
-const key = (n: string) => n.replace(/^((Dr\.|Engr\.|Md\.|ডা\.|ইঞ্জি\.|মোঃ)\s*)+/i, "").trim();
+const key = (n: string) => n.replace(/^((Dr\.|Engr\.|Md\.|Mst\.|ডা\.|ইঞ্জি\.|মোঃ|মোছাঃ)\s*)+/i, "").trim();
 const sortBi = <T extends { name: Bi }>(arr: T[], l: "bn" | "en") => {
   const col = new Intl.Collator(l === "bn" ? "bn" : "en");
   return [...arr].sort((a, b) => col.compare(key(a.name[l]), key(b.name[l])));
