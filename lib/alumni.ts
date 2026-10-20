@@ -1,4 +1,4 @@
-/** REAL alumni list supplied by the association (88 people, 9 groups). Bengali spellings of Latin names can be added when supplied. */
+/** REAL alumni list supplied by the association (99 people, 9 groups). Bengali spellings of Latin names can be added when supplied. */
 export type Bi = { bn: string; en: string };
 const b = (bn: string, en: string): Bi => ({ bn, en });
 
@@ -118,6 +118,17 @@ const raw: Alumnus[] = [
   { no: 0, name: b("মোঃ আরমান আলী", "Md. Arman Ali"), role: b("শিক্ষার্থী", "Student"), org: b("দিনাজপুর সরকারি কলেজ", "Dinajpur Government College"), group: "study" },
   { no: 0, name: b("মোঃ মমিন হোসেন", "Md. Momin Hossain"), role: b("শিক্ষার্থী", "Student"), org: b("ঢাকা কলেজ", "Dhaka College"), group: "study" },
   { no: 0, name: b("মোছাঃ শ্যামলী আক্তার", "Mst. Shamoli Akter"), role: b("শিক্ষার্থী", "Student"), org: b("রংপুর সরকারি কলেজ", "Rangpur Government College"), group: "study" },
+  { no: 0, name: b("মোঃ সোহেল রানা", "Md. Sohel Rana"), role: b("কৃষি উদ্যোক্তা", "Agri-entrepreneur"), group: "agri" },
+  { no: 0, name: b("মোঃ ইসমাইল হোসেন", "Md. Ismail Hossain"), role: b("খামারি ও কৃষি উদ্যোক্তা", "Farm owner & agri-entrepreneur"), group: "agri" },
+  { no: 0, name: b("মোঃ আব্দুল কুদ্দুস", "Md. Abdul Kuddus"), role: b("কৃষক", "Farmer"), group: "agri" },
+  { no: 0, name: b("মোঃ ইয়াসিন আলী", "Md. Yeasin Ali"), role: b("কৃষক", "Farmer"), group: "agri" },
+  { no: 0, name: b("মোঃ বাসেদ আলী", "Md. Based Ali"), role: b("কৃষক", "Farmer"), group: "agri" },
+  { no: 0, name: b("মোঃ কাসিম", "Md. Kasim"), role: b("কৃষক", "Farmer"), group: "agri" },
+  { no: 0, name: b("মোঃ সইদুল", "Md. Soidul"), role: b("কৃষক", "Farmer"), group: "agri" },
+  { no: 0, name: b("মোঃ আহসান আলী", "Md. Asahan Ali"), role: b("ব্যবসায়ী", "Businessperson"), group: "business" },
+  { no: 0, name: b("মোঃ সইদুল", "Md. Soidul"), role: b("গার্মেন্টস কর্মকর্তা", "Garments officer"), group: "jobs" },
+  { no: 0, name: b("মোঃ আনিসুর রহমান", "Md. Anisur Rhaman"), role: TBC, group: "others", unconfirmed: true },
+  { no: 0, name: b("মোঃ ইসমাইল হোসেন", "Md. Ismail Hossain"), role: b("কৃষি উদ্যোক্তা", "Agri-entrepreneur"), group: "agri" },
 ];
 
 /** `no` is assigned by position in the list above. */
