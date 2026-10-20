@@ -24,19 +24,31 @@ export const teacherList: Teacher[] = [
 ];
 
 /* ───────────── School at a glance & history (DEMO) ───────────── */
+/** REAL: founding year (1933) and location (Rangpur Division → Thakurgaon → Baliadangi). Pupils / teachers / classes are DEMO. */
+export const school = {
+  founded: { bn: "১৯৩৩", en: "1933" },
+  chain: [
+    { k: b("বিভাগ", "Division"), v: b("রংপুর", "Rangpur") },
+    { k: b("জেলা", "District"), v: b("ঠাকুরগাঁও", "Thakurgaon") },
+    { k: b("উপজেলা", "Upazila"), v: b("বালিয়াডাঙ্গী", "Baliadangi") },
+    { k: b("বিদ্যালয়", "School"), v: b("বোয়ালধার সরকারি প্রাথমিক বিদ্যালয়", "Boaldhar Government Primary School") },
+  ],
+  address: b("বোয়ালধার সরকারি প্রাথমিক বিদ্যালয়, বালিয়াডাঙ্গী, ঠাকুরগাঁও, রংপুর বিভাগ, বাংলাদেশ", "Boaldhar Government Primary School, Baliadangi, Thakurgaon, Rangpur Division, Bangladesh"),
+};
+
 export const schoolFacts = [
-  { k: b("প্রতিষ্ঠা", "Established"), v: b("১৯৬৫", "1965") },
-  { k: b("ধরন", "Type"), v: b("সরকারি প্রাথমিক বিদ্যালয়", "Government primary school") },
-  { k: b("শ্রেণি", "Classes"), v: b("প্রাক-প্রাথমিক – ৫ম", "Pre-primary – Grade 5") },
-  { k: b("শিক্ষার্থী", "Pupils"), v: b("প্রায় ২৪০ জন", "About 240") },
-  { k: b("শিক্ষক", "Teachers"), v: b("৮ জন", "8") },
-  { k: b("ব্যাচ (প্রাক্তন)", "Batches (past)"), v: b("৬০+", "60+") },
-  { k: b("মাধ্যম", "Medium"), v: b("বাংলা", "Bengali") },
-  { k: b("অবস্থান", "Location"), v: b("বোয়ালধার, বাংলাদেশ", "Boaldhar, Bangladesh") },
+  { k: b("প্রতিষ্ঠা", "Established"), v: b("১৯৩৩", "1933"), real: true },
+  { k: b("ধরন", "Type"), v: b("সরকারি প্রাথমিক বিদ্যালয়", "Government primary school"), real: true },
+  { k: b("বিভাগ", "Division"), v: b("রংপুর", "Rangpur"), real: true },
+  { k: b("জেলা", "District"), v: b("ঠাকুরগাঁও", "Thakurgaon"), real: true },
+  { k: b("উপজেলা", "Upazila"), v: b("বালিয়াডাঙ্গী", "Baliadangi"), real: true },
+  { k: b("শ্রেণি", "Classes"), v: b("প্রাক-প্রাথমিক – ৫ম", "Pre-primary – Grade 5"), real: false },
+  { k: b("শিক্ষার্থী", "Pupils"), v: b("প্রায় ২৪০ জন", "About 240"), real: false },
+  { k: b("শিক্ষক", "Teachers"), v: b("৮ জন", "8"), real: false },
 ];
 
 export const history = [
-  { y: "১৯৬৫", yEn: "1965", t: b("বিদ্যালয় প্রতিষ্ঠা", "The school is founded"), d: b("গ্রামের শিশুদের শিক্ষার জন্য স্থানীয়দের উদ্যোগে যাত্রা শুরু।", "Started by local residents to educate the village's children.") },
+  { y: "১৯৩৩", yEn: "1933", t: b("বিদ্যালয় প্রতিষ্ঠা", "The school is founded"), d: b("ঠাকুরগাঁও জেলার বালিয়াডাঙ্গী উপজেলায় বোয়ালধার সরকারি প্রাথমিক বিদ্যালয়ের যাত্রা শুরু।", "Boaldhar Government Primary School begins in Baliadangi upazila, Thakurgaon district.") },
   { y: "১৯৭৩", yEn: "1973", t: b("সরকারিকরণ", "Taken under government"), d: b("বিদ্যালয় সরকারি প্রাথমিক বিদ্যালয়ের মর্যাদা পায়।", "The school becomes a government primary school.") },
   { y: "১৯৮৫", yEn: "1985", t: b("নতুন ভবন", "A new building"), d: b("শ্রেণিকক্ষ সম্প্রসারণ ও নতুন ভবন নির্মাণ।", "Classrooms expanded and a new building constructed.") },
   { y: "২০০৫", yEn: "2005", t: b("সুবর্ণজয়ন্তীর প্রস্তুতি", "Golden-jubilee preparations"), d: b("প্রাক্তনীদের নিয়ে প্রথম বড় সম্মিলন আয়োজনের উদ্যোগ।", "First big gathering of alumni is planned.") },

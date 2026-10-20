@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { fmtDate, num, pick, type Locale } from "@/lib/i18n";
 import { batches, faqs, fees, initiatives, news, schedule } from "@/lib/demo";
-import { history, schoolFacts, teacherList, values } from "@/lib/people";
+import { history, school, schoolFacts, teacherList, values } from "@/lib/people";
 import { alumni, countOf, GROUPS, intro, sortedAlumni } from "@/lib/alumni";
 import { chief, conveners, duties, members, sortedConveners, sortedMembers, text as ctext } from "@/lib/committee";
 import credits from "@/lib/credits.json";
@@ -42,12 +42,38 @@ const Legal = ({ items }: { items: [string, string][] }) => (
 export const views: Record<string, View> = {
   about: {
     eyebrow: ["আমাদের কথা", "About us"], title: ["বিদ্যালয়ের স্মৃতি, প্রজন্মের বন্ধন", "School memories, bonds across generations"],
-    lead: ["বোয়ালধার সরকারি প্রাথমিক বিদ্যালয়ের প্রাক্তন শিক্ষার্থীদের সংগঠন।", "The alumni association of Boaldhar Government Primary School."], photo: "school-grass",
+    lead: ["ঠাকুরগাঁওয়ের বালিয়াডাঙ্গীতে ১৯৩৩ সালে প্রতিষ্ঠিত বোয়ালধার সরকারি প্রাথমিক বিদ্যালয়ের প্রাক্তন শিক্ষার্থীদের সংগঠন।", "The alumni association of Boaldhar Government Primary School, founded in 1933 in Baliadangi, Thakurgaon."], photo: "school-grass",
     render: (l) => { const p = pick(l); return (<>
       <Sec>
         <div className="grid items-center gap-12 md:grid-cols-2">
           <Reveal><SectionHead eyebrow={p("কেন এই সংগঠন", "Why we exist")} title={p("যেখানে শুরু, সেখানেই ফেরা", "Returning to where it began")} lead={p("প্রতিটি মানুষের জীবনে প্রাথমিক বিদ্যালয় প্রথম বন্ধুত্ব আর প্রথম স্বপ্নের জায়গা। সেই বন্ধন ধরে রাখতেই আমরা একত্রিত হয়েছি।", "For everyone, primary school is the home of first friendships and first dreams. We came together to keep that bond alive.")} /></Reveal>
           <Reveal delay={0.1}><div className="grid grid-cols-2 gap-4"><Photo name="school-colour" locale={l} className="aspect-[3/4] rounded-2xl" /><Photo name="girl-board" locale={l} className="mt-10 aspect-[3/4] rounded-2xl" /></div></Reveal>
+        </div>
+      </Sec>
+
+      {/* since 1933 + location chain (REAL) */}
+      <Sec>
+        <div className="grid items-center gap-14 lg:grid-cols-12">
+          <Reveal className="lg:col-span-5">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-text">{p("প্রতিষ্ঠিত", "Established")}</p>
+            <p className="num gold-text font-display text-[6.5rem] font-semibold leading-none md:text-[8.5rem]">{school.founded[l]}</p>
+            <p className="font-display mt-2 text-2xl font-semibold text-forest">{p("৯০ বছরেরও বেশি পথচলা", "Over 90 years of learning")}</p>
+            <p className="mt-3 max-w-sm text-ink-soft">{p("প্রজন্মের পর প্রজন্ম এই প্রাঙ্গণ থেকেই শুরু করেছে তাদের শিক্ষাজীবন।", "Generation after generation has started its schooling in this very yard.")}</p>
+          </Reveal>
+          <div className="lg:col-span-7">
+            <Reveal><h2 className="font-display mb-6 text-2xl font-semibold text-forest">{p("অবস্থান", "Where we are")}</h2></Reveal>
+            <ol className="relative space-y-4">
+              <span aria-hidden className="absolute bottom-6 left-[1.45rem] top-6 w-px bg-gradient-to-b from-gold/20 via-gold to-gold/20" />
+              {school.chain.map((c, i) => (
+                <Reveal as="li" key={c.k.en} delay={i * 0.1}>
+                  <div className={`group relative flex items-center gap-5 rounded-2xl border p-4 pr-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg ${i === school.chain.length - 1 ? "border-forest bg-forest text-white" : "border-line bg-white"}`}>
+                    <span className={`relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-full ring-4 ${i === school.chain.length - 1 ? "bg-gold text-green-dark ring-forest" : "bg-gold-soft text-gold-text ring-white"}`}><Icon n="pin" className="h-5 w-5" /></span>
+                    <span><span className={`block text-xs uppercase tracking-wider ${i === school.chain.length - 1 ? "text-gold" : "text-ink-soft"}`}>{c.k[l]}</span><span className="font-display block text-xl font-semibold leading-snug">{c.v[l]}</span></span>
+                  </div>
+                </Reveal>
+              ))}
+            </ol>
+          </div>
         </div>
       </Sec>
 
@@ -63,7 +89,7 @@ export const views: Record<string, View> = {
             </Reveal>
           ))}
         </dl>
-        <DemoNote l={l} />
+        <p className="mt-8 rounded-lg border border-dashed border-warn/60 bg-gold-soft/50 px-4 py-2.5 text-sm text-gold-text">{p("প্রতিষ্ঠার বছর ও অবস্থান সংগঠনের সরবরাহ করা তথ্য; শ্রেণি, শিক্ষার্থী ও শিক্ষক সংখ্যা ডেমো — চূড়ান্ত প্রকাশের আগে হালনাগাদ হবে।", "Founding year and location were supplied by the association; classes, pupil and teacher counts are demo and will be updated before launch.")}</p>
       </Sec>
 
       {/* values — five pillars */}
@@ -317,7 +343,7 @@ export const views: Record<string, View> = {
         <button type="button" className="rounded-full bg-forest px-7 py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-green-dark">{p("বার্তা পাঠান", "Send message")}</button>
       </form>
       <aside className="space-y-4 lg:col-span-5">
-        {[["pin", p("ঠিকানা", "Address"), p("বোয়ালধার সরকারি প্রাথমিক বিদ্যালয়, বোয়ালধার, বাংলাদেশ", "Boaldhar Govt Primary School, Boaldhar, Bangladesh")], ["phone", p("ফোন (ডেমো)", "Phone (demo)"), "01XXX-XXXXXX"], ["mail", p("ইমেইল (ডেমো)", "Email (demo)"), "info@boaldhar-alumni.example"], ["calendar", p("সাড়া দেওয়ার সময়", "Response time"), p("সাধারণত ২ কার্যদিবসে", "Usually within 2 working days")]].map(([ic, k, v]) => (
+        {[["pin", p("ঠিকানা", "Address"), school.address[l]], ["phone", p("ফোন (ডেমো)", "Phone (demo)"), "01XXX-XXXXXX"], ["mail", p("ইমেইল (ডেমো)", "Email (demo)"), "info@boaldhar-alumni.example"], ["calendar", p("সাড়া দেওয়ার সময়", "Response time"), p("সাধারণত ২ কার্যদিবসে", "Usually within 2 working days")]].map(([ic, k, v]) => (
           <div key={k} className="flex gap-4 rounded-2xl bg-white p-5 ring-1 ring-line"><span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-gold-soft text-gold-text"><Icon n={ic as "pin"} /></span><div><p className="text-xs uppercase tracking-wider text-ink-soft">{k}</p><p className="font-medium text-forest">{v}</p></div></div>
         ))}
         <Photo name="paddy" locale={l} className="aspect-[16/9] rounded-2xl" />
