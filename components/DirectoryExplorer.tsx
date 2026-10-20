@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { Select } from "./Select";
 
-export type Person = { no: number; name: string; role: string; org?: string; group: string; groupLabel: string; convener?: boolean; unconfirmed?: boolean };
-type Labels = { search: string; group: string; sort: string; all: string; results: string; none: string; reset: string; byGroup: string; byName: string; convener: string; confirm: string };
+export type Person = { no: number; name: string; role: string; org?: string; group: string; groupLabel: string; convener?: boolean; deputy?: boolean; unconfirmed?: boolean };
+type Labels = { search: string; group: string; sort: string; all: string; results: string; none: string; reset: string; byGroup: string; byName: string; convener: string; deputy: string; confirm: string };
 
 const initial = (n: string) => n.replace(/^((Dr\.|Engr\.|Md\.|Mst\.|ডা\.|ইঞ্জি\.|মোঃ|মোছাঃ)\s*)+/i, "").trim()[0] ?? "?";
 
@@ -29,6 +29,7 @@ export function DirectoryExplorer({ people, groups, labels, digits }: { people: 
         <span className="mt-2 flex flex-wrap gap-1.5 text-xs">
           <span className="rounded-full bg-gold-soft px-2.5 py-0.5 text-gold-text">{p.groupLabel}</span>
           {p.convener && <span className="rounded-full bg-forest px-2.5 py-0.5 font-semibold text-gold">{labels.convener}</span>}
+          {p.deputy && <span className="rounded-full border border-gold bg-white px-2.5 py-0.5 font-semibold text-gold-text">{labels.deputy}</span>}
           {p.unconfirmed && <span className="rounded-full bg-ivory px-2.5 py-0.5 text-ink-soft ring-1 ring-line">{labels.confirm}</span>}
         </span>
       </span>

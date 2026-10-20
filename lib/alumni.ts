@@ -1,4 +1,4 @@
-/** REAL alumni list supplied by the association (100 people, 9 groups). Bengali spellings of Latin names can be added when supplied. */
+/** REAL alumni list supplied by the association (102 people, 9 groups). Bengali spellings of Latin names can be added when supplied. */
 export type Bi = { bn: string; en: string };
 const b = (bn: string, en: string): Bi => ({ bn, en });
 
@@ -15,13 +15,13 @@ export const GROUPS = [
 ] as const;
 export type GroupKey = (typeof GROUPS)[number]["key"];
 
-export type Alumnus = { no: number; name: Bi; role: Bi; org?: Bi; group: GroupKey; convener?: boolean; top?: boolean; unconfirmed?: boolean };
+export type Alumnus = { no: number; name: Bi; role: Bi; org?: Bi; group: GroupKey; convener?: boolean; deputy?: boolean; top?: boolean; sortAs?: Bi; unconfirmed?: boolean };
 
 const TBC = b("পেশার বিস্তারিত নিশ্চিত করা প্রয়োজন", "Profession to be confirmed");
 
 const raw: Alumnus[] = [
   // ১. চিকিৎসা
-  { no: 1, name: b("ডা. মোঃ রবিউল আলম", "Dr. Md. Robiul Alam"), role: b("চিকিৎসক", "Physician"), group: "medical", top: true },
+  { no: 1, name: b("ডা. মোঃ রবিউল আলম", "Dr. Md. Robiul Alam"), role: b("চিকিৎসক", "Physician"), group: "medical", top: true, deputy: true },
   { no: 2, name: b("ডা. মোঃ রেজাউল করিম", "Dr. Md. Rejaul Korim"), role: b("চিকিৎসক", "Physician"), group: "medical" },
   { no: 3, name: b("ডা. রিতা আক্তার", "Dr. Rita Akter"), role: b("চিকিৎসক", "Physician"), group: "medical" },
   // ২. শিক্ষা
@@ -31,22 +31,22 @@ const raw: Alumnus[] = [
   { no: 7, name: b("মোঃ তেনজামুল ইসলাম", "Md. Tenjamul Islam"), role: b("শিক্ষক", "Teacher"), group: "education" },
   { no: 8, name: b("মোঃ শাহাদাত হোসেন", "Md. Sahadad Hossain"), role: b("শিক্ষক", "Teacher"), group: "education" },
   { no: 9, name: b("মোঃ আমিনুন ইসলাম", "Md. Aminun Islam"), role: b("শিক্ষক", "Teacher"), group: "education" },
-  { no: 10, name: b("মোঃ সাহাজাহান আলী", "Md. Sahajahan Ali"), role: b("অধ্যাপক", "Professor"), org: b("কুড়িগ্রাম পলিটেকনিক ইনস্টিটিউট", "Kurigram Polytechnic Institute"), group: "education" },
+  { no: 10, name: b("মোঃ সাহাজাহান আলী", "Md. Sahajahan Ali"), role: b("অধ্যাপক", "Professor"), org: b("কুড়িগ্রাম পলিটেকনিক ইনস্টিটিউট", "Kurigram Polytechnic Institute"), group: "education", deputy: true },
   { no: 11, name: b("মোঃ হারুন অর রশিদ", "Md. Harun Or Rosid"), role: b("জুনিয়র ইনস্ট্রাক্টর", "Junior Instructor"), org: b("দিনাজপুর পলিটেকনিক ইনস্টিটিউট", "Dinajpur Polytechnic Institute"), group: "education" },
   // ৩. প্রকৌশল ও আইটি
-  { no: 12, name: b("ইঞ্জি. মোঃ রাফুর ইসলাম", "Engr. Md. Rafur Islam"), role: b("প্রকৌশলী", "Engineer"), group: "tech", top: true },
+  { no: 12, name: b("ইঞ্জি. মোঃ রাফুর ইসলাম", "Engr. Md. Rafur Islam"), role: b("মেরিন প্রকৌশলী", "Marine Engineer"), group: "tech", top: true },
   { no: 13, name: b("মোঃ আসাদুজ্জামান", "Md. Asaduzzaman"), role: b("নেটওয়ার্ক প্রকৌশলী", "Network Engineer"), group: "tech" },
-  { no: 14, name: b("মোঃ শামীম হোসেন", "Md. Shamin Hossain"), role: b("সফটওয়্যার প্রকৌশলী", "Software Engineer"), group: "tech" },
+  { no: 14, name: b("মোঃ শামীম হোসেন", "Md. Shamin Hossain"), role: b("সফটওয়্যার প্রকৌশলী", "Software Engineer"), group: "tech", sortAs: b("মাহাবুব", "Mahabub") },
   { no: 15, name: b("মোঃ মাহাবুব আলম", "Md. Mahabub Alam"), role: b("সফটওয়্যার প্রকৌশলী", "Software Engineer"), group: "tech" },
   // ৪. চাকরি
-  { no: 16, name: b("মোঃ ইলিয়াস হোসেন", "Md. Eliash Hossian"), role: b("তহশিলদার", "Tahsildar (land officer)"), group: "jobs" },
+  { no: 16, name: b("মোঃ ইলিয়াস হোসেন", "Md. Eliash Hossian"), role: b("তহশিলদার", "Tahsildar (land officer)"), group: "jobs", deputy: true },
   { no: 17, name: b("মোঃ তরিকুল ইসলাম", "Md. Torikul Islam"), role: b("সরকারি চাকরিজীবী", "Government employee"), group: "jobs" },
   { no: 18, name: b("মোঃ মোস্তাফিজুর রহমান", "Md. Mostafijur Rahaman"), role: b("সরকারি চাকরিজীবী", "Government employee"), group: "jobs" },
   { no: 19, name: b("মোঃ আসাদুজ্জামান", "Md. Asaduzzaman"), role: b("পুলিশ সাব-ইন্সপেক্টর (SI)", "Police Sub-Inspector (SI)"), group: "jobs" },
   { no: 20, name: b("মোঃ আসাদুজ্জামান ফরিদ", "Md. Asaduzzaman Farid"), role: b("বেসরকারি চাকরিজীবী", "Private-sector employee"), group: "jobs" },
   { no: 21, name: b("মোঃ ইয়াসিন আলী", "Md. Yeasin Ali"), role: b("সরকারি চাকরিজীবী", "Government employee"), group: "jobs" },
   { no: 22, name: b("মোঃ ইয়াসিন আলী (আমিন)", "Md. Yeasin Ali (Amin)"), role: b("ভূমি জরিপকারী (আমিন)", "Land surveyor (Amin)"), group: "business" },
-  { no: 23, name: b("মোঃ ফিরোজ জামান", "Md. Firoz Zaman"), role: b("ব্যাংকার", "Banker"), org: b("সোনালী ব্যাংক", "Sonali Bank"), group: "jobs" },
+  { no: 23, name: b("মোঃ ফিরোজ জামান", "Md. Firoz Zaman"), role: b("সিনিয়র অফিসার", "Senior Officer"), org: b("রূপালী ব্যাংক পিএলসি", "Rupali Bank PLC"), group: "jobs" },
   { no: 24, name: b("মোঃ নাজমুল ইসলাম", "Md. Namzmul Islam"), role: b("ব্যাংকার", "Banker"), group: "jobs" },
   { no: 0, name: b("মোঃ মিলন হোসেন", "Md. Milon Hossain"), role: b("সরকারি চাকরিজীবী", "Government employee"), group: "jobs" },
   { no: 25, name: b("মোঃ সাকিলুর রহমান সুজন", "Md. Sakilur Rahman Suzan"), role: b("কর্মরত", "Employed"), org: b("ব্র্যাক ব্যাংক", "BRAC Bank"), group: "jobs" },
@@ -130,6 +130,8 @@ const raw: Alumnus[] = [
   { no: 0, name: b("মোঃ আনিসুর রহমান", "Md. Anisur Rhaman"), role: TBC, group: "others", unconfirmed: true },
   { no: 0, name: b("মোঃ ইসমাইল হোসেন", "Md. Ismail Hossain"), role: b("কৃষি উদ্যোক্তা", "Agri-entrepreneur"), group: "agri" },
   { no: 0, name: b("মোঃ গফুর ইসলাম", "Md. Gofur Islam"), role: b("ভবন নির্মাণ শ্রমিক ও ক্ষুদ্র ব্যবসায়ী", "Building construction worker & small businessman"), group: "business" },
+  { no: 0, name: b("মোঃ অমিত হাসান", "Md. Amit Hasan"), role: b("ওয়েব ডেভেলপার", "Web Developer"), group: "tech" },
+  { no: 0, name: b("মোঃ রাজু রানা", "Md. Raju Rana"), role: b("ওয়েব ডেভেলপার", "Web Developer"), group: "tech" },
 ];
 
 /** `no` is assigned by position in the list above. */
@@ -137,18 +139,22 @@ export const alumni: Alumnus[] = raw.map((a, i) => ({ ...a, no: i + 1 }));
 
 const sortKey = (n: string) => n.replace(/^((Dr\.|Engr\.|Md\.|Mst\.|ডা\.|ইঞ্জি\.|মোঃ|মোছাঃ)\s*)+/i, "").trim();
 
-/** Alphabetical within each group (language-aware), serial numbers follow that order. The Chief Convener and Dr. Robiul Alam and Engr. Rafur Islam stay first in their groups. */
+/** Alphabetical within each group (language-aware), serial numbers follow that order. The Chief Convener, then the conveners (আহ্বায়ক), then Engr. Rafur Islam stay first in their groups. */
 export function sortedAlumni(l: "bn" | "en"): Alumnus[] {
   const c = new Intl.Collator(l === "bn" ? "bn" : "en");
   const gi = (k: GroupKey) => GROUPS.findIndex((g) => g.key === k);
-  // inside the higher-education group: universities, then colleges, then institutes, then everyone else
+  // inside groups: engineering & IT = engineers then developers; higher education = universities, colleges, institutes, then everyone else
   const tier = (a: Alumnus) => {
+    // engineering & IT: engineers first, then developers
+    if (a.group === "tech") return /Developer|ডেভেলপার/i.test(`${a.role.en} ${a.role.bn}`) ? 1 : 0;
     if (a.group !== "study") return 0;
     const org = `${a.org?.en ?? ""} ${a.org?.bn ?? ""}`;
     return /University|বিশ্ববিদ্যালয়/i.test(org) ? 0 : /College|কলেজ/i.test(org) ? 1 : /Institute|ইনস্টিটিউট/i.test(org) ? 2 : 3;
   };
+  // chief convener, then the conveners (আহ্বায়ক), then pinned people, then everyone else
+  const lead = (a: Alumnus) => (a.convener ? 0 : a.deputy ? 1 : a.top ? 2 : 3);
   return [...raw]
-    .sort((a, b) => gi(a.group) - gi(b.group) || Number(!!(b.convener || b.top)) - Number(!!(a.convener || a.top)) || tier(a) - tier(b) || c.compare(sortKey(a.name[l]), sortKey(b.name[l])))
+    .sort((a, b) => gi(a.group) - gi(b.group) || lead(a) - lead(b) || tier(a) - tier(b) || c.compare(a.sortAs?.[l] ?? sortKey(a.name[l]), b.sortAs?.[l] ?? sortKey(b.name[l])))
     .map((a, i) => ({ ...a, no: i + 1 }));
 }
 
